@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom"; 
+import { Button } from 'antd';
+
 import "./movie.css";
 function Movie() {
     return (
@@ -12,7 +15,7 @@ function Movie() {
                 </div>
             </a>
             <div class="movie-detail">
-                <a href="#" class="active" target="_blank">一键购票</a>
+                <Link to="/buy"><Button type="primary">一键购票</Button></Link>
             </div>
         </div>
     )

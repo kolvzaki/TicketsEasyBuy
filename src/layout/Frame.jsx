@@ -1,63 +1,42 @@
-import { Breadcrumb, Layout, Menu, Image } from 'antd';
+import { Layout, Menu } from 'antd';
 import React from 'react';
 import Movie from '../pages/Movie';
 import './frame.css';
-import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
+import { AppstoreOutlined, MailOutlined } from '@ant-design/icons';
 
-const { Header, Content, Footer } = Layout;
+const { Content, Footer } = Layout;
 
 function Frame() {
   const menuItems = [
     {
-      label: 'Navigation One',
-      key: 'mail',
+      label: 'Home',
+      key: 'home',
       icon: <MailOutlined />
     },
     {
-      label: 'Navigation Two',
-      key: 'app',
+      label: 'About',
+      key: 'about',
       icon: <AppstoreOutlined />
-    },
-    {
-      label: 'Navigation Three',
-      key: 'SubMenu',
-      icon: <SettingOutlined />
     }
   ];
 
   return (
     <Layout>
-      <div className='header'>
-        <div className="logo"><img className="logo-pic" src='logo.png' alt='logo' />ticket-easy-buy</div>
-        <Menu className='menu' mode="horizontal" defaultSelectedKeys={['mail']} items={menuItems} />
-      </div>
+      <header className='header'>
+        <div className='logo'><img className='logo-pic' src='logo.png' alt='logo' />Ticket Easy Buy</div>
+        <Menu mode="horizontal" defaultSelectedKeys={['home']} items={menuItems} />
+      </header>
 
-      <Content
-        className="content"
-        style={{
-          padding: '0 50px'
-        }}
-      >
-        <div
-          className="site-layout-background"
-          style={{
-            padding: 24,
-            minHeight: 380,
-            marginTop: 500
-          }}
-        >
+      <Content className='content' style={{ padding: '0 50px' }}>
+        <div className="site-layout-background" style={{ padding: 20, minHeight: 400, marginTop: 500 }}>
           <Movie />
           <Movie />
           <Movie />
           <Movie />
         </div>
-
       </Content>
-      <Footer
-        style={{
-          textAlign: 'center',
-        }}
-      >
+
+      <Footer style={{ textAlign: 'center', }}>
         tickets-easy-buy
       </Footer>
     </Layout>
