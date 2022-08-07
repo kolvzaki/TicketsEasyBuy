@@ -38,3 +38,7 @@
     font-weight: bold;
     font-size: 30px;
 }
+
+.movie-ticket-order .ant-btn{
+    font-weight: bold;
+}
