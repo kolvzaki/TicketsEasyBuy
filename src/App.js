@@ -2,7 +2,8 @@ import './App.css';
 import NotFound from "./pages/NotFound"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Frame from './layout/Frame';
-import Buy from './pages/Buy';
+import MovieTicketOrder from './pages/MovieTicketOrder';
+import MovieInfo from './pages/MovieInfo';
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Frame />} />
-        <Route path="/buy" element={<Buy />} />
+        <Route path="/movie-ticket-order" element={<MovieTicketOrder />} />
+        <Route path="/movie-info" element={<MovieInfo />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
